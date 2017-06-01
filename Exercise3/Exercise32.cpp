@@ -1,5 +1,5 @@
-/// Νικόλαος Παναγιώτης Κούκουρας - 321/2014093
-/// Γέροντας Αλέξανδρος - 321/2015029
+/// ΓΓ©ΓªΓΌΓ«Γ΅Γ―Γ² ΓΓ΅Γ­Γ΅Γ£Γ©ΓΎΓ΄Γ§Γ² ΓΓ―Γ½ΓªΓ―ΓµΓ±Γ΅Γ² - 321/2014093
+/// ΓƒΓΓ±Γ―Γ­Γ΄Γ΅Γ² ΓΓ«ΓΓ®Γ΅Γ­Γ¤Γ±Γ―Γ² - 321/2015029
 
 #include <iostream>
 #include <ctime>
@@ -7,13 +7,13 @@
 
 using namespace std;
 
-void printArray(int *array, int size) /// Εμφάνιση πίνακα σωρού.
+void printArray(int *array, int size) /// Γ…Γ¬Γ¶ΓΓ­Γ©Γ³Γ§ Γ°ΓΓ­Γ΅ΓªΓ΅ Γ³ΓΉΓ±Γ―Γ½.
 {
     for (int i = 1; i < size; i++)
         cout << i <<". " << array[i] << endl;
 }
 
-void printHeapTree(int *array, int size) /// Εμφάνιση σωρού σε «δενδροειδή» αναπαράσταση.
+void printHeapTree(int *array, int size) /// Γ…Γ¬Γ¶ΓΓ­Γ©Γ³Γ§ Γ³ΓΉΓ±Γ―Γ½ Γ³Γ¥ Β«Γ¤Γ¥Γ­Γ¤Γ±Γ―Γ¥Γ©Γ¤ΓΒ» Γ΅Γ­Γ΅Γ°Γ΅Γ±ΓΓ³Γ΄Γ΅Γ³Γ§.
 {
     int x = 1;
 
@@ -31,22 +31,22 @@ void printHeapTree(int *array, int size) /// Εμφάνιση σωρού σε «δενδροειδή» αναπ
     cout << endl << endl;
 }
 
-int Left(int i) /// Επιστροφή αριστερού παιδιού.
+int Left(int i) /// Γ…Γ°Γ©Γ³Γ΄Γ±Γ―Γ¶Γ Γ΅Γ±Γ©Γ³Γ΄Γ¥Γ±Γ―Γ½ Γ°Γ΅Γ©Γ¤Γ©Γ―Γ½.
 {
     return 2*i;
 }
 
-int Right(int i) /// Επιστροφή δεξιού παιδιού.
+int Right(int i) /// Γ…Γ°Γ©Γ³Γ΄Γ±Γ―Γ¶Γ Γ¤Γ¥Γ®Γ©Γ―Γ½ Γ°Γ΅Γ©Γ¤Γ©Γ―Γ½.
 {
     return (2*i) + 1;
 }
 
-int Parent(int i) /// Επιστροφή του γονέα.
+int Parent(int i) /// Γ…Γ°Γ©Γ³Γ΄Γ±Γ―Γ¶Γ Γ΄Γ―Γµ Γ£Γ―Γ­ΓΓ΅.
 {
     return i/2;
 }
 
-void createArray(int* array, int size) /// Δημιουργία πίνακα τυχαίων.
+void createArray(int* array, int size) /// Γ„Γ§Γ¬Γ©Γ―ΓµΓ±Γ£ΓΓ΅ Γ°ΓΓ­Γ΅ΓªΓ΅ Γ΄ΓµΓ·Γ΅ΓΓΉΓ­.
 {
     srand(time(NULL));
 
@@ -54,7 +54,7 @@ void createArray(int* array, int size) /// Δημιουργία πίνακα τυχαίων.
         array[i] = rand () % 100 + 1;
 }
 
-void fixHeap(int* array,int size, int i) /// Συγρίνει τον πατερα του υπόδεντρου με τα παιδιά του και κάνει swap με το μεγαλύτερο παιδί.
+void fixHeap(int* array,int size, int i) /// Γ“ΓµΓ£Γ±ΓΓ­Γ¥Γ© Γ΄Γ―Γ­ Γ°Γ΅Γ΄Γ¥Γ±Γ΅ Γ΄Γ―Γµ ΓµΓ°ΓΌΓ¤Γ¥Γ­Γ΄Γ±Γ―Γµ Γ¬Γ¥ Γ΄Γ΅ Γ°Γ΅Γ©Γ¤Γ©Γ Γ΄Γ―Γµ ΓªΓ΅Γ© ΓªΓΓ­Γ¥Γ© swap Γ¬Γ¥ Γ΄Γ― Γ¬Γ¥Γ£Γ΅Γ«Γ½Γ΄Γ¥Γ±Γ― Γ°Γ΅Γ©Γ¤Γ.
 {
     int largest = i;
     int left = Left(i);
@@ -66,17 +66,17 @@ void fixHeap(int* array,int size, int i) /// Συγρίνει τον πατερα του υπόδεντρου 
     if (largest != i)
     {
         swap(array[i], array[largest]);
-        fixHeap(array,size,largest); /// H fixHeap λειτουργεί αναδρομικά, και σταματάει όταν το στοιχείο τοποθετηθει στη σωστη θέση.
+        fixHeap(array,size,largest); /// H fixHeap Γ«Γ¥Γ©Γ΄Γ―ΓµΓ±Γ£Γ¥Γ Γ΅Γ­Γ΅Γ¤Γ±Γ―Γ¬Γ©ΓªΓ, ΓªΓ΅Γ© Γ³Γ΄Γ΅Γ¬Γ΅Γ΄ΓΓ¥Γ© ΓΌΓ΄Γ΅Γ­ Γ΄Γ― Γ³Γ΄Γ―Γ©Γ·Γ¥ΓΓ― Γ΄Γ―Γ°Γ―Γ¨Γ¥Γ΄Γ§Γ¨Γ¥Γ© Γ³Γ΄Γ§ Γ³ΓΉΓ³Γ΄Γ§ Γ¨ΓΓ³Γ§.
     }
 }
 
-void createHeap(int *array,int size) /// Δημιουργία σωρού από πίνακα.
+void createHeap(int *array,int size) /// Γ„Γ§Γ¬Γ©Γ―ΓµΓ±Γ£ΓΓ΅ Γ³ΓΉΓ±Γ―Γ½ Γ΅Γ°ΓΌ Γ°ΓΓ­Γ΅ΓªΓ΅.
 {
     for (int i = size/2; i > 0; i--)
         fixHeap(array,size,i);
 }
 
-void heapSort(int *array,int size) /// Ταξινόμηση κι εμφάνιση ταξινομημένου πίνακα.
+void heapSort(int *array,int size) /// Γ”Γ΅Γ®Γ©Γ­ΓΌΓ¬Γ§Γ³Γ§ ΓªΓ© Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ§ Γ΄Γ΅Γ®Γ©Γ­Γ―Γ¬Γ§Γ¬ΓΓ­Γ―Γµ Γ°ΓΓ­Γ΅ΓªΓ΅.
 {
     //createHeap(array,size);
 
@@ -89,7 +89,7 @@ void heapSort(int *array,int size) /// Ταξινόμηση κι εμφάνιση ταξινομημένου πίνα
     printArray(array,size);
 }
 
-void resize(int *&array, int& size) /// Δημιουργια καινούριου πίνακα με μέγεθος size + 1.
+void resize(int *&array, int& size) /// Γ„Γ§Γ¬Γ©Γ―ΓµΓ±Γ£Γ©Γ΅ ΓªΓ΅Γ©Γ­Γ―Γ½Γ±Γ©Γ―Γµ Γ°ΓΓ­Γ΅ΓªΓ΅ Γ¬Γ¥ Γ¬ΓΓ£Γ¥Γ¨Γ―Γ² size + 1.
 {
     int *tempArray = array;
     array = new int[++size];
@@ -98,7 +98,7 @@ void resize(int *&array, int& size) /// Δημιουργια καινούριου πίνακα με μέγεθος 
         array[i] = tempArray[i];
 }
 
-void insertHeap(int *&array, int &size) /// Προσθήκη νέου στοιχείου στο σωρό.
+void insertHeap(int *&array, int &size) /// ΓΓ±Γ―Γ³Γ¨ΓΓªΓ§ Γ­ΓΓ―Γµ Γ³Γ΄Γ―Γ©Γ·Γ¥ΓΓ―Γµ Γ³Γ΄Γ― Γ³ΓΉΓ±ΓΌ.
 {
     int value;
 
