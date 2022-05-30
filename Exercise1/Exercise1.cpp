@@ -1,5 +1,4 @@
 /// Αλέξανδρος Γέροντας - ICSD15029
-/// Νικόλαος Παναγιώτης Κούκουρας - ICSD14093
 
 #include <iostream>
 #include <cstdlib>
